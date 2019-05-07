@@ -1,5 +1,9 @@
 # Yuting-Lin-ps239t-final-project
 ## Short Description
+To see how people talked about some psychological strong indicators of human well-beings(i.e., meaningful life and mindfulness) on Twitter. I majorly used differnet libraries includes rtweet(for collecting data from twitter)/tidyverse&tidytext$tidyr(for tidying data)/igraph&ggraph&ggthemes(for visualizing data). Performing Text mining, Word netword analysis and Sentiment analysis in R. 
+
+First, appied Twitter API randomly retrieving 5000 tweets for meaningful life and 5000 tweets for mindfulness. Second, cleaning data like remained text words,removed punctuation, converted to lowercase, added id for each tweet, stored the token words from each tweet and removed stop words from each tweet for text analysis. Finally, I made some cute plots by setting them into pinky colors and removing the background, enlarging the font size. 
+data from R, 
 
 Give a short, 1-2 paragraph description of your project. Focus on the code, not the theoretical / substantive / academic side of things. 
 
