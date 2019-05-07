@@ -26,8 +26,14 @@ R, version 3.5.1
 
 ### Results
 
-1. coverage-over-time.jpeg: Graphs the number of articles about each region over time.
-2. regression-table.txt: Summarizes the results of OLS regression, modelling *nyt* on a number of covariates.
+1. after_meaningful.jpg: after removing the stop words for the tweets includes "meaningful life".
+2. after_mindfulness_pure.jpg: after removing the stop words for the tweets includes "mindfulness".
+3. before_meaningful.jpg: before removing the stop words for the tweets includes "meaningful life".
+4. before_mindfulness_pure.jpg: before removing the stop words for the tweets includes "mindfulness".
+5. sentiment_meaningful.jpg: categorized sentiment ranking of tweets includes "meaningful life".
+6. sentiment_mindfulness_pure.jpg: categorized sentiment ranking of tweets includes "mindfulness".
+7. word network_meaningful.jpg: show the different clusters in tweets includes "meaningful life".
+8. word network_mindfulness_pure.jpg: show the different clusters in tweets includes "mindfulness".
 
 ## More Information
 
