@@ -32,7 +32,7 @@ R, version 3.5.1
 ## More Information
 
 1.Since all of my codes were written in the same script file and I divided them into three files for the project, somehow the codes runs weird, but before I did this, all codes worked well together.
-2.After I tried many times of the Twitter API, I found those tweets I got are based on the timeline which is the most recent data. That means if I run the code to retrieve tweets again, it would have different result depend on what people are talking about on twitter right now.
-3.Twitter API have the limit for us to get data in a specific time. If you exceeded the number of tweets you can download, it will shows the error like "Rate limit exceeded". But don't worry about this too much, just try it in like fifteen minutes.
 
-Include any other details you think your user might need to reproduce your results. You may also include other information such as your contact information, credits, etc.
+2.After I tried many times of the Twitter API, I found those tweets I got are based on the timeline which is the most recent data. That means if I run the code to retrieve tweets again, it would have different result depend on what people are talking about on twitter right now.
+
+3.Twitter API have the limit for us to get data in a specific time. If you exceeded the number of tweets you can download, it will shows the error like "Rate limit exceeded". But don't worry about this too much, just try it in like fifteen minutes.
