@@ -2,39 +2,27 @@
 ## Short Description
 To see how people talked about some psychological strong indicators of human well-beings(i.e., meaningful life and mindfulness) on Twitter. I majorly used differnet libraries includes rtweet(for collecting data from twitter)/tidyverse&tidytext$tidyr(for tidying data)/igraph&ggraph&ggthemes(for visualizing data). Performing Text mining, Word netword analysis and Sentiment analysis in R. 
 
-First, appied Twitter API randomly retrieving 5000 tweets for meaningful life and 5000 tweets for mindfulness. Second, cleaning data like remained text words,removed punctuation, converted to lowercase, added id for each tweet, stored the token words from each tweet and removed stop words from each tweet for text analysis. Finally, I made some cute plots by setting them into pinky colors and removing the background, enlarging the font size. 
-data from R, 
-
-Give a short, 1-2 paragraph description of your project. Focus on the code, not the theoretical / substantive / academic side of things. 
+First, appied Twitter API randomly retrieving 5000 tweets for meaningful life and 5000 tweets for mindfulness. Second, cleaned data like remained text words,removed punctuation, converted to lowercase, added id for each tweet, stored the token words from each tweet and removed stop words from each tweet for text analysis. Third, made some cute counting word plots by setting them into pinky colors and removing the background, enlarging the font size. Fourth, produced some word network plot by selecting Fruchterman-Reingold layout(one kind of algorithms) for the reason I feel it can presents the data best. Finally, categorized words from tweets by using Bing lexicon to make the data attached with sentiment score and see their pattern in either positive/negative.
 
 ## Dependencies
 
-List what software your code depends on, as well as version numbers, like so:.
-
-1. R, version 3.1
-2. Python 2.7, Anaconda distribution.
-
-(In your code itself, includes commands that install required packages.)
+R, version 3.5.1
 
 ## Files
 
-List all other files contained in the repo, along with a brief description of each one, like so:
-
 ### Data
 
-1. polity.csv: The PolityVI dataset, available here: http://www.systemicpeace.org/inscrdata.html
-2. nyt.csv: Contains data from the New York Times API collected via collect-nyt.ipynb . Includes information on all articles containing the term "Programmer Cat", 1980-2010.
-3. analysis-dataset.csv: The final Analysis Dataset derived from the raw data above. It includes country-year values for all UN countries 1980-2010, with observations for the following variables: 
-    - *ccode*: Correlates of War numeric code for country observation
-    - *year*: Year of observation
-    - *polity*: PolityVI score
-    - *nyt*: Number of New York Times articles about "Programmer Cat"
+1. meaningful_tweets.csv: row 5000 tweets$text includes "meaningful life" 
+2. meaningful_tweets_clean.csv: cleaned version of meaningful_tweets.csv for visualization.
+3. mindfulness_pure_tweets.csv: row 5000 tweets$text includes "mindfulness"
+4. mindfulness_pure_tweets_clean.csv: cleaned version of mindfulness_pure_tweets.csv for visualization.
+
 
 ### Code
 
-1. 01_collect-nyt.py: Collects data from New York Times API and exports data to the file nyt.csv
-2. 02_merge-data.R: Loads, cleans, and merges the raw Polity and NYT datasets into the Analysis Dataset.
-2. 03_analysis.R: Conducts descriptive analysis of the data, producing the tables and visualizations found in the Results directory.
+1. 01_collect_twitter.R: Collects data from Twitter API.
+2. 02_merge-data.R: Loads, cleans, and merges the raw tweets into useful data.
+2. 03_analysis.R: Conducts Text mining, Word netword analysis and Sentiment analysis.
 
 ### Results
 
@@ -42,5 +30,9 @@ List all other files contained in the repo, along with a brief description of ea
 2. regression-table.txt: Summarizes the results of OLS regression, modelling *nyt* on a number of covariates.
 
 ## More Information
+
+1.Since all of my codes were written in the same script file and I divided them into three files for the project, somehow the codes runs weird, but before I did this, all codes worked well together.
+2.After I tried many times of the Twitter API, I found those tweets I got are based on the timeline which is the most recent data. That means if I run the code to retrieve tweets again, it would have different result depend on what people are talking about on twitter right now.
+3.Twitter API have the limit for us to get data in a specific time. If you exceeded the number of tweets you can download, it will shows the error like "Rate limit exceeded". But don't worry about this too much, just try it in like fifteen minutes.
 
 Include any other details you think your user might need to reproduce your results. You may also include other information such as your contact information, credits, etc.
